@@ -18,7 +18,7 @@ IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer'
 
 ## Step 1: Install 
 <br /> 
-(1) add iotpaycreditcard dependency in pubspec.yaml
+(1) add iotpaycreditcard dependency in pubspec.yaml.
 ```java
    iotpaycreditcard: ^0.0.4
 ```
