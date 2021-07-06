@@ -137,4 +137,15 @@ pay or add card
       });
 ```
 
-
+## Step 4: Debug or Release
+  an additional option is need as following: --no-sound-null-safety 
+  Ex:
+    Debug
+```java
+  flutter run  --no-sound-null-safety
+```
+    Release
+```java
+  flutter run --release  --no-sound-null-safety
+```
+...
