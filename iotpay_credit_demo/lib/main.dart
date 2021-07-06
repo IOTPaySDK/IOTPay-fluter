@@ -11,7 +11,8 @@ void main() {
     localizationsDelegates: const [
       S.delegate,
       GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
     ],
     supportedLocales: S.delegate.supportedLocales,
     home: MyApp(),
