@@ -23,7 +23,7 @@ IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer'
 ```java
    iotpaycreditcard: ^0.0.4
 ```
-(2) make sure provider dependence and flutter localization dependency is added.
+(2) make sure provider and flutter localization dependencies are added.
 
 ```java
   provider: ^5.0.0
@@ -54,7 +54,7 @@ runApp(MaterialApp(
       GlobalWidgetsLocalizations.delegate
     ],
     supportedLocales: S.delegate.supportedLocales,
-    home:
+    home:...
 ```
 
 Add provider DataProvider
@@ -67,7 +67,7 @@ body: MultiProvider(
           ],
           child:
               Consumer<DataProvider>(builder: (context, dataProvider, child) {
-            return
+            return ...
 ```
 
 - creditCardStyle:
