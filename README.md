@@ -6,7 +6,7 @@
 IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer's credit/debit card information.
 <br /> 
 [For the whole business picture please refer the '2.3 Event Flow and Options'](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> <br />
-1 Embed a credit entry GUI into a ViewGroup to collect consumer’s credit/debit card information:
+1 Embed a credit entry GUI into a ViewGroup to collect consumerâ€™s credit/debit card information:
 <br /> card number, holder name, expiry date, CVV/CVC
 <br /> 
 2 provide add card, payment methods
@@ -19,11 +19,11 @@ IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer'
 ## Step 1: Install 
 <br /> 
 (1) add iotpaycreditcard dependency in pubspec.yaml
-```
+```java
    iotpaycreditcard: ^0.0.4
 ```
 (2) make sure provider dependence and flutter localization dependency is added.
-```
+```java
   provider: ^5.0.0
   flutter_localizations:
     sdk: flutter
@@ -35,47 +35,47 @@ IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer'
 
 Import some packages.
 ```java
-import 'package:flutter/material.dart';
-import 'package:iotpaycreditcard/config/IOTPayConfig.dart';
-import 'package:iotpaycreditcard/iotpaycreditcard.dart';
-import 'package:iotpaycreditcard/providers/dataProvider.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+importÂ 'package:flutter/material.dart';
+importÂ 'package:iotpaycreditcard/config/IOTPayConfig.dart';
+importÂ 'package:iotpaycreditcard/iotpaycreditcard.dart';
+importÂ 'package:iotpaycreditcard/providers/dataProvider.dart';
+importÂ 'package:provider/provider.dart';
+importÂ 'package:flutter_localizations/flutter_localizations.dart';
 ```
 
 Initial localizaion in MaterialApp
 ```java
 runApp(MaterialApp(
-    localizationsDelegates: const [
-      S.delegate,
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate
-    ],
-    supportedLocales: S.delegate.supportedLocales,
-    home:
+Â Â Â Â localizationsDelegates:Â constÂ [
+Â Â Â Â Â Â S.delegate,
+Â Â Â Â Â Â GlobalMaterialLocalizations.delegate,
+Â Â Â Â Â Â GlobalWidgetsLocalizations.delegate
+Â Â Â Â ],
+Â Â Â Â supportedLocales:Â S.delegate.supportedLocales,
+Â Â Â Â home:
 ```
 
 Add provider DataProvider
 ```java
-body: MultiProvider(
-          providers: [
-            ChangeNotifierProvider<DataProvider>(
-              create: (context) => DataProvider(),
-            ),
-          ],
-          child:
-              Consumer<DataProvider>(builder: (context, dataProvider, child) {
-            return
+body:Â MultiProvider(
+Â Â Â Â Â Â Â Â Â Â providers:Â [
+Â Â Â Â Â Â Â Â Â Â Â Â ChangeNotifierProvider<DataProvider>(
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â create:Â (context)Â =>Â DataProvider(),
+Â Â Â Â Â Â Â Â Â Â Â Â ),
+Â Â Â Â Â Â Â Â Â Â ],
+Â Â Â Â Â Â Â Â Â Â child:
+Â Â Â Â Â Â Â Â Â Â Â Â Â Â Consumer<DataProvider>(builder:Â (context,Â dataProvider,Â child)Â {
+Â Â Â Â Â Â Â Â Â Â Â Â return
 ```
 
 - creditCardStyle:
 Select a style as triple lines form or single line form
 ```java
-dataProvider.isTripleLine = true
+dataProvider.isTripleLineÂ =Â true
 ```
 ![alt text](https://github.com/zhongzeyu/IOTPay-creditcard-flutter-demo/blob/master/triple.png ) 
 ```java
-dataProvider.isTripleLine = false
+dataProvider.isTripleLineÂ =Â false
 ```
 ![alt text](https://github.com/zhongzeyu/IOTPay-creditcard-flutter-demo/blob/master/single.png ) 
 
@@ -84,7 +84,7 @@ Embed the credit card widget in right place.
 
 - Example:
 ```java
-  CardWidget(),
+ Â CardWidget(),
 ```
 
 
@@ -99,7 +99,7 @@ pay or add card
  [About the secureID please refer the '4 Temporary secureID'](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> 
 ```java
  dataProvider.sendRequest(
-    PaySecureID,IOTPayConfig.SimplePurchase,(dynamic result) {
+    PaySecureID,IOTPayConfig.SimplePurchase,(dynamicÂ result)Â {
 
 
             //please process result in your own way, Ex: as following;
@@ -127,7 +127,7 @@ pay or add card
  [About the secureID please refer the '4 Temporary secureID'](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> 
 ```java
   dataProvider.sendRequest(
-	AddCardSecureID,IOTPayConfig.AddCard,(String result) {
+	AddCardSecureID,IOTPayConfig.AddCard,(StringÂ result)Â {
 
           //please process result in your own way, ex: showMsg("Payment Result:" + result);
         }
