@@ -37,12 +37,13 @@ IOTPayCreditCard is a flutter plugin called in merchant app to collect consumer'
 
 Import some packages.
 ```java
-import 'package:flutter/material.dart';
-import 'package:iotpaycreditcard/config/IOTPayConfig.dart';
-import 'package:iotpaycreditcard/iotpaycreditcard.dart';
-import 'package:iotpaycreditcard/providers/dataProvider.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/material.dart';
+import 'package:iotpaycreditcard/config/IOTPayConfig.dart';
+import 'package:iotpaycreditcard/generated/l10n.dart';
+import 'package:iotpaycreditcard/iotpaycreditcard.dart';
+import 'package:iotpaycreditcard/providers/dataProvider.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 ```
 
 Initial localizaion in MaterialApp
